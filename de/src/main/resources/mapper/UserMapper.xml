@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.de.mapper.UserMapper">
+
+    <select id="selectAllUser" resultType="com.example.de.pojo.User">
+        select *
+        from user
+        ORDER BY id
+    </select>
+
+</mapper>
+        <!-- sql映射文件 ： 写sql语句的， mybatis会执行这个sql  -->
