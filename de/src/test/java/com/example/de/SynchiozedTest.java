@@ -41,5 +41,6 @@ class ThreadTest{
         new Thread(synchiozedTest,"线程三").start();
         new Thread(synchiozedTest,"线程si").start();
         System.out.println("tt分支");
+        System.out.println("修改过的代码");
     }
 }
