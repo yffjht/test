@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.test.mapper.ShUserMapper">
+<!--  添加商品的消费，退款记录  -->
+    <insert id="insertShUserByDetail"  keyProperty="id">
+        insert into sh_user(uid, detail) values(#{uid},#{detail})
+    </insert>
+    <select id="selectUserMoneyByDetail" resultType="string">
+        select detail from sh_user
+        where uid = #{uid}
+    </select>
+</mapper>

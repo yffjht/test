@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.test.mapper.UserMapper">
+<!--通过id查询用户余额-->
+    <select id="selectUserMoney" resultType="double">
+        select money from myuser where id=#{id}
+    </select>
+    <!-- 消费·退款方法 -->
+    <update id="updateUser">
+        update myuser
+        set money = #{money}
+        where id = #{id}
+    </update>
+</mapper>
